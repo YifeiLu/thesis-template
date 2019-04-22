@@ -1,3 +1,44 @@
 \chapter{Using Mathematical Representations}
 
-\LaTeX offers powerful support for mathematical representations.
+\LaTeX ~ offers powerful support for mathematical representations.
+
+Following are some equations from IEEE Standard 738-2012 \cite{IEEEPower&EnergySociety.23December2013}, which are used here as example and to show some basic operation and \LaTeX ~ code to insert mathematical equations into your text. 
+
+If you want to insert a single equation (as the one shown in Formula \ref{radiated_heat_loss_rate}), just create an ``equation" environment and type the corresponding equation.
+
+\begin{equation}
+	q_r = 17.8 {\cdot} D_0 {\cdot} {\varepsilon} {\cdot}\left[
+	\left( \frac{T_{max}{+}273}{100} \right)^4 - \left( \frac{T_a{+}273}{100} \right)^4
+	\right] \qquad W/m
+	\label{radiated_heat_loss_rate}
+\end{equation}
+
+Maybe you also want to explain meanings of the variables used in the equation, \LaTeX ~ offers a ``tabbing" environment which can be used to align the variables and corresponding explanations. As an example, for the variables used in Formula \ref{radiated_heat_loss_rate}, one may write:
+
+\begin{tabbing}
+	where \hspace{0.3cm} \= variables  \= explanations \kill
+	where \> {$D_0$} \> is the conductor diameter, \\
+	\> {$\varepsilon$} \> is the emissivity of surface area, \\
+	\> {$T_{max}$} \> is the maximum operating temperature of the conductor, \\
+	\> {$T_a$} \> is the ambient temperature.
+\end{tabbing}
+
+As shown above, to refer one variable or insert some mathematical expression in the text body, one may use {\verb|{$ $}|} to create a mathematical expression environment.
+
+It is also useful to write some equations in one block (as shown in Formula \ref{steady_state_heat_balance}), however to make the equations look better, you may align the equations with each other. For example in the exemplary equations, they are aligned to the equal symbol. To align text in \LaTeX ~ environment, the {\verb|&|} symbol is used.
+
+\begin{align}
+	q_c {+} q_r &= q_s + I^2{\cdot}R \left(T_{s} \right)\\
+	I &= \sqrt{\frac{q_c{+}q_r{-}q_s}{R \left(T_{max} \right)}} 
+	\label{steady_state_heat_balance}
+\end{align}
+
+Similar to the {\verb|\aligh|} environment, you may create equations with {\verb|\subequations|} environment, which will create \ref{qc1} and \ref{qc2} instead of a new number for the second equation as in Formula \ref{steady_state_heat_balance} did.
+
+\begin{subequations}
+	\begin{align}
+	q_{c1} &= K_{angle}{\cdot}\left[1.01{+}1.35{\cdot}{N_{Re}}^{0.52} \right] {\cdot} k_f{\cdot}\left(T_{max}{-}T_a\right) \qquad &W/m \label{qc1}\\ 
+	q_{c2} &= K_{angle}{\cdot}0.754{\cdot}{N_{Re}}^{0.6} {\cdot} k_f{\cdot}\left(T_{max}{-}T_a\right) \qquad &W/m \label{qc2}
+	\end{align}
+\end{subequations}
+
