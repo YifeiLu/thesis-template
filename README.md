@@ -6,4 +6,4 @@ The LaTeX distribution used in this template is Tex Live (available at: https://
 
 The editor used is TeXstudio (available at: https://www.texstudio.org/).
 
-If you decided to use this template with TeXstudio as editor, you should firstly set the "Default compiler" as XeLaTeX and the "Default Bibliography Tool" as biber.
+:heavy_exclamation_mark: If you decided to use this template with TeXstudio as editor, you should firstly set the "Default compiler" as XeLaTeX and the "Default Bibliography Tool" as biber.
