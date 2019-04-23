@@ -1,0 +1,11 @@
+\chapter{Acronyms}
+
+It is rather handy to use acronyms or abbreviations in your thesis with \LaTeX. As defined in the file \href{acronyms/acronyms.tex}{acronyms.tex}, the first entry of {\verb|\newacronym|} command is the key you entered to call the acronym, while the second one is the short-form of this acronym and the third one is long-form.
+
+For example, an entry of acronym is defined as:
+
+{\verb|\newacronym{der}{DER}{Distributed Energy Resouce}|}
+
+To refer the full version of this term for the first time, you may use {\verb|\gls{der}|} to get \gls{der} as output, {\verb|\acrfull{der}|} give the same result \acrfull{der} while {\verb|\acrshort{der}|} for the short form \acrshort{der} and {\verb|\acrlong{der}|} for the long form \acrlong{der}.
+
+If is quite useful to refer an acronym with the plural form and it is quite simple to realize in \LaTeX --- just add ``pl" at the end of one command, e.g. {\verb|acrfullpl{der}|}, and the output will be \acrfullpl{der}.

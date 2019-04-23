@@ -1,4 +1,7 @@
 \chapter{Citation and Bibliography}
 
-There are a lot of literature management software in the market, e.g. EndNote, Citavi, Mandeley, etc. Taking Citavi as example, one can add literature and reference sources into this software and exported all references into a bib-file, which can be read by \LaTeX ~ and directly added into the generated pdf-file.
+There are a lot of literature management software in the market, e.g. EndNote, Citavi, Mandeley, etc. Taking Citavi as example, one can add literature and reference sources into this software and exported all references into a bib-file, which can be read by \LaTeX~and directly added into the generated pdf-file.
 
+In this thesis template, the citation management package used is ``biblatex", hence in Citavi you should export the selected references by setting a ``BibLaTeX" export filter. It should be noticed, that the time format supported in the package biblatex is the UTC time format, i.e. yyyy-MM-dd. Citavi also recognize different time formats, e.g. German format dd.MM.yyyy. However, problems may occur when one attempted to export such time format into a bib-file. Therefore, it is recommended to use UTC time format in Citavi and then export.
+
+Each reference entry has a unique BibTeX key within your Citavi project, which can be directly used in \LaTeX~environment with the command {\verb|\cite|}. For example, type {\verb|\cite{Burger.20180508}|}, the corresponding reference will be referred in the text \cite{Burger.20180508}.
