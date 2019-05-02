@@ -12,15 +12,20 @@
 
 \LoadClass[openright, titlepage, numbers=noenddot, cleardoublepage=empty, BCOR=5mm, a4paper, fontsize=12pt, oneside, DIV=calc]{scrreprt}
 
-\ProvidesClass{thesis}[2019/02/26 Yifei Lu thesis class, based on UDE SYSSEC thesis template]
+\ProvidesClass{thesis-template}[2019/02/26 thesis-template class, on base of UDE-SYSSEC thesis template]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % translations
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newif\ifgerman\germantrue
-
+\newif\ifgerman
+% default to german
+\germantrue
+% add package options:
+\DeclareOption{german}{
+	\germantrue
+}
 \DeclareOption{english}{
 	\germanfalse
 }
@@ -50,7 +55,7 @@
 \newcommand{\@stringSemester}{}
 
 
-%% German
+%% German version
 \if{germantrue}
 	\renewcommand{\@supervisor}{<Betreuername per \textbackslash supervisor setzen>}
 	\renewcommand{\@reviewerA}{<Gutachtername 1 per \textbackslash reviewerA setzen>}
@@ -222,10 +227,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\RequirePackage[british, english]{babel}
+\RequirePackage[british]{babel}
 \RequirePackage{appendix}
 \RequirePackage{hyperxmp}
-\RequirePackage[utf8]{inputenc}
+%\RequirePackage[utf8]{inputenc}
 \RequirePackage{fancyhdr}
 \RequirePackage[hyphens]{url}
 \RequirePackage[defernumbers=true, sorting=none, giveninits=true, backend=biber, doi=true, url=true, block=ragged, maxnames=6, citestyle=ieee]{biblatex}
@@ -268,6 +273,9 @@
 \RequirePackage{titlesec}
 \RequirePackage{mathtools}
 
+% Import packages to highlight text contents
+\RequirePackage{soul}
+
 \RequirePackage{metalogo}
 \RequirePackage{graphicx}
 \RequirePackage{subfig}
@@ -286,9 +294,6 @@
 
 \RequirePackage[export]{adjustbox} % change figure location
 
-\RequirePackage{fontspec} 
-\setmainfont{Times New Roman} % set main font type
-
 \RequirePackage{geometry} % define page format, please check the requirement of your institute
  \geometry{
  a4paper,
@@ -298,8 +303,6 @@
  bottom=30mm,
  top=30mm,
  }
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% settings
@@ -357,22 +360,30 @@
 \displaywidowpenalty = 10000 % formulas
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% set font type
+\RequirePackage{fontspec} 
+\setmainfont{TeX Gyre Termes} % set main font type
+%\setsansfont{DejaVu Sans}
+\setsansfont{TeX Gyre Heros}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % set font size of different titles
 
 % chapters
-\titleformat{\chapter}{\relax}{\sffamily\bfseries\textsc{\LARGE\thechapter}}{1em}{\sffamily\bfseries\LARGE}
+\titleformat{\chapter}{\relax}{\sffamily\bfseries\LARGE\thechapter}{1em}{\sffamily\bfseries\LARGE}
 
 % sections
-\titleformat{\section}{\relax}{\bfseries\textsc{\Large\thesection}}{1em}{\sffamily\bfseries\large}
+\titleformat{\section}{\relax}{\sffamily\bfseries\Large\thesection}{1em}{\sffamily\bfseries\Large}
 
 % subsections
-\titleformat{\subsection}{\relax}{\bfseries\large\thesubsection}{1em}{\sffamily\large\bfseries}
+\titleformat{\subsection}{\relax}{\sffamily\bfseries\large\thesubsection}{1em}{\sffamily\large\bfseries}
 
 % subsubsections
-\titleformat{\subsubsection}{\relax}{\normalsize\thesubsubsection}{1em}{\sffamily\normalsize}
+\titleformat{\subsubsection}{\relax}{\sffamily\normalsize\thesubsubsection}{1em}{\sffamily\normalsize}
 
 % paragraphs
-\titleformat{\paragraph}[hang]{\normalfont\normalsize}{\theparagraph}{0pt}{\sffamily\bfseries}
+\titleformat{\paragraph}[hang]{\sffamily\normalfont\normalsize}{\theparagraph}{0pt}{\sffamily\bfseries}
 
 % descriptionlabels
 \renewcommand{\descriptionlabel}[1]{\hspace*{\labelsep}\textsc{#1}}   % spacedlowsmallcaps textit textsc
