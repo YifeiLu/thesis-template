@@ -272,6 +272,8 @@
 \RequirePackage{graphicx}
 \RequirePackage{subfig}
 
+\RequirePackage{verbatim}
+
 \RequirePackage[acronyms, nomain, style=long, toc, section=chapter, nogroupskip=true]{glossaries}
 \renewcommand{\glsnamefont}[1]{\textbf{#1}}
 
