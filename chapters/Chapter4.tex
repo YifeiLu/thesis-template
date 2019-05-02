@@ -26,8 +26,8 @@ In a scientific document, it is necessary and essential to insert several figure
 \begin{figure}[h!]
 	% position the figure at the horizontal center
 	\centering
-	% figure width set to 0.75 times the width of text body
-	\includegraphics[width=0.75\textwidth]{fig_1.pdf} 
+	% figure width set to 0.9 times the width of text body
+	\includegraphics[width=0.9\textwidth]{fig_1.pdf} 
 	% set figure caption
 	\caption{An exemplary figure} 
 	% set label for this figure so it can be refered in the text
@@ -37,7 +37,7 @@ In a scientific document, it is necessary and essential to insert several figure
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.75\textwidth]{fig_1.pdf} 
+		\includegraphics[width=0.9\textwidth]{fig_1.pdf} 
 		\caption{An exemplary figure} 
 		\label{fig_1} 
 	\end{figure} 
@@ -47,19 +47,19 @@ In a scientific document, it is necessary and essential to insert several figure
 	\begin{figure}[h!]
 		\centering
 		\subfloat{
-			\includegraphics[width=0.375\textwidth]{sub_1.pdf}
+			\includegraphics[width=0.425\textwidth]{sub_1.pdf}
 			\label{sub_1}
 		} \hspace{1cm}
 		\subfloat{
-			\includegraphics[width=0.375\textwidth]{sub_2.pdf}
+			\includegraphics[width=0.425\textwidth]{sub_2.pdf}
 			\label{sub_2}
 		} \\
 		\subfloat{
-			\includegraphics[width=0.375\textwidth]{sub_3.pdf}
+			\includegraphics[width=0.425\textwidth]{sub_3.pdf}
 			\label{sub_3}
 		}
 		\subfloat{
-			\includegraphics[width=0.375\textwidth]{sub_4.pdf}
+			\includegraphics[width=0.425\textwidth]{sub_4.pdf}
 			\label{sub_4}
 		}
 		\caption{Example of subfigures}\label{subfloats}
@@ -70,7 +70,7 @@ In a scientific document, it is necessary and essential to insert several figure
 	\begin{figure}[h!]
 		\centering
 		\begin{tikzpicture}
-			\node (img)  {\includegraphics[width=0.75\textwidth]{fig_2.pdf}};
+			\node (img)  {\includegraphics[width=0.9\textwidth]{fig_2.pdf}};
 			\node[below=of img, node distance=0cm, yshift=1.2cm,font=\footnotesize] {Time point};
 			\node[left=of img, node distance=0cm, rotate=90, anchor=center,yshift=-1cm,font=\footnotesize] {Signal};
 		\end{tikzpicture}

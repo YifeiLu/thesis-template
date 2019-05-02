@@ -7,11 +7,11 @@ import os
 sns.set()
 plt.rcParams["font.family"] = "Times New Roman"
 plt.rcParams["mathtext.fontset"] = "dejavuserif"
-params = {'legend.fontsize': 24,
-          'axes.labelsize': 28,
-          'axes.titlesize': 28,
-          'xtick.labelsize': 24,
-          'ytick.labelsize': 24,
+params = {'legend.fontsize': 22,
+          'axes.labelsize': 24,
+          'axes.titlesize': 24,
+          'xtick.labelsize': 22,
+          'ytick.labelsize': 22,
           'figure.figsize': (12, 10)}
 pylab.rcParams.update(params)
 
