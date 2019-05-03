@@ -250,3 +250,4 @@ TSWLatexianTemp*
 *.aux
 *.xml
 *.xml
+graphics/python_scripts/.idea/python_scripts.iml
