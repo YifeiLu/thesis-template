@@ -42,22 +42,29 @@
 	\begin{subequations}
 		\begin{align}
 		q_{c1} &= K_{angle}{\cdot}\left[1.01{+}1.35{\cdot}{N_{Re}}^{0.52} \right] {\cdot} k_f{\cdot}\left(T_{max}{-}T_a\right) \qquad &W/m \label{qc1}\\ 
-		q_{c2} &= K_{angle}{\cdot}0.754{\cdot}{N_{Re}}^{0.6} {\cdot} k_f{\cdot}\left(T_{max}{-}T_a\right) \qquad &W/m \label{qc2}
+		q_{c2} &= K_{angle}{\cdot}0.754{\cdot}{N_{Re}}^{0.6} {\cdot} k_f {\cdot}\left(T_{max}{-}T_a\right) \qquad &W/m \label{qc2}
 		\end{align}
 	\end{subequations}
 
-\section{Inline Mathematical Expressions}
+\section{In-line Mathematical Expressions}
 
-	It is usually necessary to use some mathematical expressions inline, e.g. to mention variables or add units after numbers. As mentioned before, using {\color{blue}{\verb|{$ $}|}} inline environment is rather simple, e.g. \colorbox{yellow!60}{$ H_2O $} (created with {\color{blue}{\verb|{$ H_2O $}|}}). However, expressions generated with mathematical environment in \LaTeX~are always italic. If you wish to have normal expressions, you may use the {\verb|\ensuremath|} environment, e.g. {\colorbox{yellow!60}{H{\ensuremath{_2}}O} (created with {\color{blue}{\verb|H{\ensuremath{_2}}O|}}). If you need to insert some mathematical expression quite often, you can also define a new command for such symbols or expressions. For example, you may define a new command for superscript -n and the dot multiplication sign with
+	It is usually necessary to use some mathematical expressions in-line, e.g. to mention variables or add units after numbers. As mentioned before, using {\color{blue}{\verb|{$ $}|}} in-line environment is rather simple, e.g. \colorbox{yellow!60}{$ H_2O $} (created with {\color{blue}{\verb|{$ H_2O $}|}}). However, expressions generated with mathematical environment in \LaTeX~are always italic. If you wish to have normal expressions, you may use the {\verb|\ensuremath|} environment, e.g. {\colorbox{yellow!60}{H{\ensuremath{_2}}O} (created with {\color{blue}{\verb|H{\ensuremath{_2}}O|}}). If you need to insert some mathematical expression quite often, you can also define a new command for such symbols or expressions. For example, you may define a new command for superscript -n and the dot multiplication sign with
 	
-	{\color{blue}{\verb|\newcommand{\intextInv}[1]{\ensuremath{^{-#1}}}|}}
+	{\color{blue}{\verb|\newcommand{\inTextInv}[1]{\ensuremath{^{-#1}}}|}}
 	
-	{\color{blue}{\verb|\newcommand{\intextDot}{\ensuremath{\cdot}}|}}
+	{\color{blue}{\verb|\newcommand{\inTextDot}{\ensuremath{\cdot}}|}}
 	
 	\newcommand{\intextInv}[1]{\ensuremath{^{-#1}}}
 	\newcommand{\intextDot}{\ensuremath{\cdot}}
 	
-	So that you can use {\color{blue}{\verb|m{\intextDot}s{\intextInv{1}}|}} to create the \acrshort{SI} unit for speed m{\intextDot}s{\intextInv{1}} and {\color{blue}{\verb|kg{\intextDot}m{\intextDot}s{\intextInv{2}}|}} for the \acrshort{SI} unit of force kg{\intextDot}m{\intextDot}s{\intextInv{2}}
+	So that you can use {\color{blue}{\verb|m{\intextDot}s{\intextInv{1}}|}} to create the \acrshort{SI} unit for speed m{\intextDot}s{\intextInv{1}} and {\color{blue}{\verb|kg{\intextDot}m{\intextDot}s{\intextInv{2}}|}} for the \acrshort{SI} unit of force kg{\intextDot}m{\intextDot}s{\intextInv{2}}.
+	
+%	It is also possible to use the package {\color{blue}\textbf{siunitx}} and set the {\color{blue}{inter-unit-product}} option by {\color{blue}{\verb|\sisetup{inter-unit-product=\ensuremath{{\cdot}}}|}}
+%	
+%	\si{\kilo\gram\metre\per\square\second}
+%	
+%	\si{\milli\ohm\per\kilo\meter}
+		
 
 
 

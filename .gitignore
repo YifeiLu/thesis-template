@@ -248,3 +248,5 @@ TSWLatexianTemp*
 *.aux
 *.aux
 *.aux
+*.xml
+*.xml

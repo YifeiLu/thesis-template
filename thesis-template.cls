@@ -76,6 +76,7 @@
 	\renewcommand{\@stringReviewerB}{Zweitgutachter}
 	\renewcommand{\@stringHandoverdate}{Abgabe}
 	\renewcommand{\@stringSemester}{Studiensemester}
+
 \else
 	\renewcommand{\@supervisor}{<Set supervisor name with \textbackslash supervisor>}
 	\renewcommand{\@reviewerA}{<Set name of 1st supervisor with \textbackslash reviewerA>}
@@ -227,7 +228,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\RequirePackage[british]{babel}
+\RequirePackage[british, english, german]{babel}
 \RequirePackage{appendix}
 \RequirePackage{hyperxmp}
 %\RequirePackage[utf8]{inputenc}
@@ -263,8 +264,8 @@
 \hypersetup{colorlinks=true, linktocpage=true, breaklinks=true, bookmarksnumbered, bookmarksopen=true,bookmarksopenlevel=1, pdfhighlight=/O, urlcolor=webbrown, linkcolor=linkblue, citecolor=webgreen}
 \RequirePackage{textcomp} % extra symbols; used for euro and copyright symbol
 \RequirePackage[load-configurations={abbreviations,binary}]{siunitx}
-\RequirePackage{siunitx}
-\RequirePackage{xspace} % ?
+
+\RequirePackage{xspace}
 \RequirePackage{algorithmic}
 \RequirePackage{algorithm}
 \RequirePackage[24hr,iso]{datetime}
@@ -280,7 +281,9 @@
 \RequirePackage{graphicx}
 \RequirePackage{subfig}
 
-\RequirePackage{verbatim}
+\RequirePackage{verbatim} % add latex commands as text
+
+\RequirePackage{blindtext}
 
 \RequirePackage[acronyms, nomain, style=long, toc, section=chapter, nogroupskip=true]{glossaries}
 \renewcommand{\glsnamefont}[1]{\textbf{#1}}
@@ -366,6 +369,12 @@
 \setmainfont{TeX Gyre Termes} % set main font type
 %\setsansfont{DejaVu Sans}
 \setsansfont{TeX Gyre Heros}
+
+% TODO set font types for mathematical expressions
+%\RequirePackage{xfrac}
+%\RequirePackage{unicode-math}
+%\setmathfont{TeX Gyre Termes Math}[version=termes]
+%\mathversion{termes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % set font size of different titles
