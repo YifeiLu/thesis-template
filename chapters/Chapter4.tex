@@ -59,19 +59,19 @@ In a scientific document, it is necessary and essential to insert several figure
 	
 	\begin{figure}[h!]
 		\centering
-		\subfloat{
+		\subfloat[Sub-1]{
 			\includegraphics[width=0.4\textwidth]{sub_1.pdf}
 			\label{sub_1}
 		} \hspace{1cm}
-		\subfloat{
+		\subfloat[Sub-2]{
 			\includegraphics[width=0.4\textwidth]{sub_2.pdf}
 			\label{sub_2}
 		} \\
-		\subfloat{
+		\subfloat[Sub-3]{
 			\includegraphics[width=0.4\textwidth]{sub_3.pdf}
 			\label{sub_3}
 		}
-		\subfloat{
+		\subfloat[Sub-4]{
 			\includegraphics[width=0.4\textwidth]{sub_4.pdf}
 			\label{sub_4}
 		}
@@ -82,7 +82,7 @@ In a scientific document, it is necessary and essential to insert several figure
 	
 \section{Inserting Tables}
 
-	Table is another common element in scientific documents. \LaTeX provides a large set of tools to customize tables. Some most common types and corresponding commands are shown in this section.
+	Table is another common element in scientific documents. \LaTeX~provides a large set of tools to customize tables. Some most common types and corresponding commands are shown in this section.
 	
 	The following code block shows a simple example to create a table. The parameter of command {\color{blue}{\verb|tabular|}} is aimed to set the number of columns, their delimiters and the alignment types. As shown in the exemplary codes, {\color{blue}{\texttt{{| l | c | r |}}}} creates a table with three columns and the ``|" symbols create vertical delimiters in the table. The letters are the definitions of alignment for each column, e.g. ``l" means left alignment, ``c" center and ``r" right. To add horizontal delimiters, just add {\color{blue}{\verb|\hline|}} before or after the entry of a row. 
 	
@@ -130,7 +130,7 @@ In a scientific document, it is necessary and essential to insert several figure
 		\label{table_2}
 	\end{table}
 
-	It is sometimes necessary to merge several cells into one to make the table contents more evident. In \LaTeX~this function can be done by using {\color{blue}{\verb|\multicolumn{text}{pos}{text}|}} or {\color{blue}{\verb|\multirow{text}{width}{text}|}} commands. It should be noticed in Table \ref{table_4}, instead of using simply {\color{blue}{\verb|\hline|}}, {\color{blue}{\verb|\cline{2-3}|}} is used, which means add a horizontal border only from the 2nd to 3rd columns.
+	It is sometimes necessary to merge several cells into one to make the table contents more evident. In \LaTeX~this function can be done by using {\color{blue}{\verb|\multicolumn{cols}{pos}{text}|}} or {\color{blue}{\verb|\multirow{number of rows}{width}{text}|}} commands. It should be noticed in Table \ref{table_4}, instead of using simply {\color{blue}{\verb|\hline|}}, {\color{blue}{\verb|\cline{2-3}|}} is used, which means add a horizontal border only from the 2nd to 3rd columns.
 	
 	\begin{table}[h!]
 		\centering
@@ -158,7 +158,7 @@ In a scientific document, it is necessary and essential to insert several figure
 		\label{table_4}
 	\end{table}
 
-	In chapter 1 the color function in \LaTeX has already been introduced. The colors can be set as the background color with {\color{blue}{\verb|\rowcolor|}} or {\color{blue}{\verb|\rowcolors|}} commands. The first one is used to set color for a single row, while the second one can automatically alternate the row color as shown in Figure \ref{table_5}, where the color is defined before and the title is set to 60\% and the other rows alternates between 20\% and 40\%.
+	In chapter 1 the color function in \LaTeX~has already been introduced. The colors can be set as the background color with {\color{blue}{\verb|\rowcolor|}} or {\color{blue}{\verb|\rowcolors|}} commands. The first one is used to set color for a single row, while the second one can automatically alternate the row color as shown in Figure \ref{table_5}, where the color is defined before and the title is set to 60\% and the other rows alternates between 20\% and 40\%.
 	
 	\definecolor{lal-g}{RGB}{253, 185, 39}
 	\definecolor{lal-p}{RGB}{85, 37, 130}
