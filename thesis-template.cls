@@ -228,7 +228,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\RequirePackage[british, english, german]{babel}
+\RequirePackage[british, english]{babel}
 \RequirePackage{appendix}
 \RequirePackage{hyperxmp}
 %\RequirePackage[utf8]{inputenc}
